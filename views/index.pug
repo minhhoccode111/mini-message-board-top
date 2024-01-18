@@ -2,4 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  div
+    for mes in messages 
+      p #{mes.name.concat(' ').padEnd(40, '_')} #[small #{mes.added.getFullYear()}-#{(mes.added.getMonth()+1).toString().padStart(2, '0')}-#{(mes.added.getDate()).toString().padStart(2, '0')} | #{(mes.added.getHours()).toString().padStart(2, '0')}:#{(mes.added.getMinutes()).toString().padStart(2, '0')}]
+      strong - #{mes.text[0].toUpperCase() + mes.text.slice(1)}
+      hr
+        
+
+  div 
+    a(href="/new") Mew message

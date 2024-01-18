@@ -1,0 +1,16 @@
+extends layout
+
+block content 
+  div 
+    form(action="/new" method="POST") 
+      h2 Add mew message
+      div 
+        label(for="username") Username 
+          input(type="text" name="username" id="username" required placeholder="Enter your username")
+      br
+      div 
+        label(for="message") Message 
+          input(type="text" name="message" id="message" required placeholder="Enter your message")
+      br
+      div 
+        button(type="submit") Send
