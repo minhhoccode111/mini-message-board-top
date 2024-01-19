@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "dev": "DEBUG=mini-message-board-top:* & npm start"
+    "start": "node ./bin/www",
+    "server": "nodemon ./bin/www",
+    "dev": "DEBUG=mini-message-board-top:* & npm run server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
